@@ -38,7 +38,7 @@ Modify `train.py` to set the training parameters before running:
 ```python
 # Inside train.py
 model = YOLO('ultralytics/cfg/models/v8/DFPD.yaml')
-model.train(data=r'DFPD\kitti.yaml',
+model.train(data=r'DFPD-YOLO\kitti.yaml',
 EPOCHS = 200
 BATCH_SIZE = 16
 IMG_SIZE = 640
@@ -52,9 +52,22 @@ python train.py
 
 
 ### Inference
-To test the trained model on an image:
+Modify `test.py` to set evaluation parameters before running:
+
+```python
+# Inside test.py
+model = YOLO('runs/name/weights/best.pt')
+model.val(source='kitti-yolov5/test/images',
+ imgsz=640,
+project='runs/detect',
+name='v8',
+save=True,
+```)
+
+Then execute:
+
 ```bash
-python detect.py --weights best.pt --source test_image.jpg
+python val.py
 ```
 ### Evaluation
 
@@ -63,7 +76,7 @@ Modify `val.py` to set evaluation parameters before running:
 ```python
 # Inside val.py
 model = YOLO('runs/name/weights/best.pt')
-model.val(data=r'D:\yolov5\ultralytics-main-822\dataset\kitti3.yaml',
+model.predict(data=r'kitti-yolov5/val/images',
 split='test',
 imgsz=640,
 batch=16,
@@ -78,6 +91,7 @@ python val.py
 ## Experimental Results
 Our experiments on the KITTI dataset show that **DFPD-YOLO significantly improves detection accuracy**, especially for **small and occluded objects**. The proposed enhancements lead to better feature representation, faster convergence, and improved localization precision.
 
+![image](https://github.com/user-attachments/assets/3c1705fb-3f0f-48d4-9935-046fb21ef1ae)
 
 
 ## Contact

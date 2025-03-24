@@ -87,11 +87,21 @@ Then execute:
 ```bash
 python val.py
 ```
+## Key Code Files
+
+The key components of DFPD-YOLO, including the Dynamic Task-aligned Detection Head (DTDH), FocusFeature, feature diffusion mechanism, and task decomposition, are implemented in the following files:
+
+- **DTDH.py**: Contains the implementation of the Dynamic Task-aligned Detection Head.
+- **FocusFeature.py**: Implements the FocusFeature and feature diffusion mechanism in the Neck section, improving multi-scale feature context-awareness.
+- **TaskDecomposition.py**: Implements task decomposition for better separation and alignment of the classification and localization tasks, enhancing the overall model performance.
+
+These files contain the core functionality of the model and can be modified for further improvements or experiments.
 
 ## Experimental Results
 Our experiments on the KITTI dataset show that **DFPD-YOLO significantly improves detection accuracy**, especially for **small and occluded objects**. The proposed enhancements lead to better feature representation, faster convergence, and improved localization precision.
+![fig11](https://github.com/user-attachments/assets/272c5f55-5a38-42b2-905a-714af745b365)
 
-![image](https://github.com/user-attachments/assets/3c1705fb-3f0f-48d4-9935-046fb21ef1ae)
+
 
 
 ## Contact

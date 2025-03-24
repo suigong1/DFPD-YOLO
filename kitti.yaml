@@ -1,0 +1,8 @@
+path: \yolov5\ultralytics-main-822\
+train: ../kitti-yolov5/train/images
+val: ../kitti-yolov5/val/images
+test: ../kitti-yolov5/test/images
+
+
+nc: 3
+names: ['Cyclist','car','Pedestrian']

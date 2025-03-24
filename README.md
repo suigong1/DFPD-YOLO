@@ -23,48 +23,63 @@ To set up the environment and run DFPD-YOLO, follow these steps:
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-repo/DFPD-YOLO.git
+   git clone https://github.com/suigong1/DFPD-YOLO.git
    cd DFPD-YOLO
    ```
 2. Install dependencies:
    ```bash
    pip install -r requirements.txt
    ```
-3. Download the KITTI dataset and place it in the appropriate directory.
+3. The categorized kitti dataset is in the kitti-yolov5 folder, which contains the categorized train, val, and test folders.
 
 ## Usage
-### Training
-To train DFPD-YOLO on the KITTI dataset, run:
+Modify `train.py` to set the training parameters before running:
+
+```python
+# Inside train.py
+model = YOLO('ultralytics/cfg/models/v8/DFPD.yaml')
+model.train(data=r'DFPD\kitti.yaml',
+EPOCHS = 200
+BATCH_SIZE = 16
+IMG_SIZE = 640
+```)
+
+Then execute:
+
 ```bash
-python train.py --data kitti.yaml --epochs 100 --batch-size 16 --img-size 640
+python train.py
 ```
+
 
 ### Inference
 To test the trained model on an image:
 ```bash
 python detect.py --weights best.pt --source test_image.jpg
 ```
-
 ### Evaluation
-To evaluate performance on KITTI:
+
+Modify `val.py` to set evaluation parameters before running:
+
+```python
+# Inside val.py
+model = YOLO('runs/name/weights/best.pt')
+model.val(data=r'D:\yolov5\ultralytics-main-822\dataset\kitti3.yaml',
+split='test',
+imgsz=640,
+batch=16,
+```)
+
+Then execute:
+
 ```bash
-python val.py --data kitti.yaml --weights best.pt
+python val.py
 ```
 
 ## Experimental Results
 Our experiments on the KITTI dataset show that **DFPD-YOLO significantly improves detection accuracy**, especially for **small and occluded objects**. The proposed enhancements lead to better feature representation, faster convergence, and improved localization precision.
 
-## Citation
-If you find this work useful, please consider citing our paper:
-```
-@article{your_paper,
-  author    = {Your Name},
-  title     = {DFPD-YOLO: Diffusion-Focused Pyramid Dynamic Task-aligned Detection Head YOLO},
-  journal   = {Your Journal/Conference},
-  year      = {2025},
-}
-```
+
 
 ## Contact
-For any inquiries, please contact **your_email@example.com**.
+For any inquiries, please contact **lzf18874212199@gmail.com**.
 

@@ -99,6 +99,18 @@ These files contain the core functionality of the model and can be modified for 
 
 ## Experimental Results
 Our experiments on the KITTI dataset show that **DFPD-YOLO significantly improves detection accuracy**, especially for **small and occluded objects**. The proposed enhancements lead to better feature representation, faster convergence, and improved localization precision.
+
+| Algorithm      | Params (M) | P (%)  | R (%)  | mAP@0.5 (%) | mAP@0.5:0.95 (%) |
+|---------------|-----------|--------|--------|-------------|------------------|
+| YOLOV3-tiny   | 9.5       | 85.6   | 70.0   | 78.0        | 54.0             |
+| YOLOV5n       | 2.2       | 87.9   | 77.6   | 85.6        | 58.6             |
+| YOLOV6s       | 16.0      | 90.0   | 82.0   | 87.3        | 62.9             |
+| YOLOV7-tiny   | 6.0       | 83.7   | 82.1   | 87.0        | 54.2             |
+| YOLOV8n       | 3.0       | 90.6   | 78.0   | 86.6        | 59.4             |
+| YOLOV9-tiny   |**1.7**       | 87.8   | 78.8   | 86.7        | 60.2             |
+| YOLOV10n      | 2.7       | 88.6   | 75.1   | 85.0        | 58.8             |
+| YOLOV11n      | 2.6       | 87.1   | 80.2   | 87.1        | 59.7             |
+| **DFPD-YOLO** | 2.6   | **93.0** | **83.6** | **91.1**   | **65.5**         |
 ![fig11](https://github.com/user-attachments/assets/272c5f55-5a38-42b2-905a-714af745b365)
 
 

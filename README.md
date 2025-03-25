@@ -111,6 +111,8 @@ Our experiments on the KITTI dataset show that **DFPD-YOLO significantly improve
 | YOLOV10n      | 2.7       | 88.6   | 75.1   | 85.0        | 58.8             |
 | YOLOV11n      | 2.6       | 87.1   | 80.2   | 87.1        | 59.7             |
 | **DFPD-YOLO** | 2.6   | **93.0** | **83.6** | **91.1**   | **65.5**         |
+
+
 ![fig11](https://github.com/user-attachments/assets/272c5f55-5a38-42b2-905a-714af745b365)
 
 

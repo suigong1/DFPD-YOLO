@@ -1,4 +1,4 @@
-# DFPD-YOLO: Diffusion-Focused Pyramid Dynamic Task-aligned Detection Head YOLO
+# Enhanced Road Object Detection with DFPD-YOLO: Focusing on Small and Occluded Targets
 
 ## Introduction
 Object detection in road scenes presents significant challenges due to multi-scale variations and complex backgrounds. Many existing methods struggle with detecting small objects that have blurred features and low contrast with their surroundings. Additionally, traditional detection heads separate classification and localization tasks, neglecting their potential correlation and limiting overall performance.
@@ -120,9 +120,9 @@ Our experiments on the KITTI dataset show that **DFPD-YOLO significantly improve
 If you find our work useful, please cite it as follows:  
 
 ```bibtex
-@article{your_paper,
+@article{Liu2024DFPD,
   author    = {Zifeng Liu，Lujiao Li，Yongbin Hu，Shigang Hu},
-  title     = { DFPD-YOLO: Diffusion-Focused Pyramid Dynamic Task-aligned Detection Head YOLO
+  title     = { Enhanced Road Object Detection with DFPD-YOLO: Focusing on Small and Occluded Targets
 },
   journal   = {The Visual Computer},
   year      = {2025},
@@ -131,10 +131,7 @@ If you find our work useful, please cite it as follows:
   pages     = {To be assigned},  
   doi       = {To be assigned}
 }
-
-
-
-
+```
 ## Contact
 For any inquiries, please contact **lzf18874212199@gmail.com**.
 

@@ -121,7 +121,7 @@ If you find our work useful, please cite it as follows:
 
 ```bibtex
 @article{Liu2024DFPD,
-  author    = {Zifeng Liu，Lujiao Li，Yongbin Hu，Shigang Hu},
+  author    = {Lujiao Li，Zifeng Liu，Yongbin Hu，Shigang Hu},
   title     = { Enhanced Road Object Detection with DFPD-YOLO: Focusing on Small and Occluded Targets
 },
   journal   = {The Visual Computer},

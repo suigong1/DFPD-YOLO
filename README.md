@@ -115,6 +115,22 @@ Our experiments on the KITTI dataset show that **DFPD-YOLO significantly improve
 
 ![fig11](https://github.com/user-attachments/assets/272c5f55-5a38-42b2-905a-714af745b365)
 
+## 📖 Citation  
+
+If you find our work useful, please cite it as follows:  
+
+```bibtex
+@article{your_paper,
+  author    = {Zifeng Liu，Lujiao Li，Yongbin Hu，Shigang Hu},
+  title     = { DFPD-YOLO: Diffusion-Focused Pyramid Dynamic Task-aligned Detection Head YOLO
+},
+  journal   = {The Visual Computer},
+  year      = {2025},
+  volume    = {To be assigned},  
+  number    = {To be assigned},  
+  pages     = {To be assigned},  
+  doi       = {To be assigned}
+}
 
 
 
